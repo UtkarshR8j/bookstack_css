@@ -1,1 +1,9 @@
+/* Hide the page-details panel */
+#page-details {
+    display: none !important;
+}
 
+/* Hide the tri-layout-left print-hidden panel */
+.tri-layout-left.print-hidden {
+    display: none !important;
+}
