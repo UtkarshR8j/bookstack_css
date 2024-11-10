@@ -1,180 +1,165 @@
-/* Scenic Background */
-body {
-    background: url('https://public-blob.s3.us-east-1.amazonaws.com/katrien-van-crombrugghe-mqJp2Bv6bkM-unsplash.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-    transition: background 0.5s ease;
-  }
-  
-  #page-details, .tri-layout-left.print-hidden {
-    display: none !important;
-  }
-  
-  /* Main Color Palette */
-  :root {
-    --transparent-white: rgba(255, 255, 255, 0.7);
-    --transparent-dark: rgba(0, 0, 0, 0.5);
-    --accent-color: rgba(46, 204, 113, 0.7); /* Soft futuristic green */
-    --text-color: #222;
-    --shadow-light: rgba(255, 255, 255, 0.6);
-    --shadow-dark: rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Body Text */
-  html, body {
-    font-size: 16px;
-    color: var(--text-color);
-    font-weight: 400;
+/* General Page Styles */
+html, body {
     margin: 0;
     padding: 0;
-  }
-  
-  /* Transparent, glassy card design */
-  .card, .button, .sidebar, .floating-toolbox, table.table {
-    background: var(--transparent-white);
-    backdrop-filter: blur(8px);
-    box-shadow: 4px 4px 12px var(--shadow-dark), -4px -4px 12px var(--shadow-light);
-    border-radius: 20px;
-    padding: 20px;
-    transition: all 0.3s ease;
-  }
-  
-  /* Headers */
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--text-color);
-    font-weight: 600;
-    margin-bottom: 0.5em;
-  }
-  
-  /* Search Bar with Transparent Overlay */
-  .search-box input {
-    background: var(--transparent-white);
-    border-radius: 25px;
-    padding: 12px 24px;
-    color: var(--text-color);
-    box-shadow: inset 2px 2px 8px var(--shadow-dark), inset -2px -2px 8px var(--shadow-light);
-    transition: box-shadow 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .search-box input:focus {
-    background-color: rgba(255, 255, 255, 0.85);
-    box-shadow: inset 2px 2px 6px var(--shadow-dark), inset -2px -2px 6px var(--shadow-light);
-    outline: none;
-  }
-  
-  /* Button Design */
-  .button {
-    background: var(--accent-color);
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 12px 24px;
-    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    background-color: #282a36; /* Dark background */
+    color: #f8f8f2; /* Light text */
+    line-height: 1.6;
+}
+
+body {
+    color: #6272a4; /* Light bluish-gray text for body */
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    color: #f8f8f2; /* Ensure headings have bright contrast */
+}
+
+/* Header Section */
+#header {
+    background-color: #282a36; /* Dark background */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo-text {
+    color: #50fa7b; /* Sustainable green color for logo text */
+    font-size: 2.5rem;
     font-weight: bold;
-    box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
-    transition: box-shadow 0.3s ease, background 0.3s ease;
-  }
-  
-  .button:hover {
-    background: rgba(46, 204, 113, 0.85);
-    box-shadow: 2px 2px 5px var(--shadow-dark), -2px -2px 5px var(--shadow-light);
-  }
-  
-  /* Sidebar */
-  .sidebar {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-    box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
-    border-radius: 25px;
+    letter-spacing: 1px;
+}
+
+/* Main Section */
+main {
+    padding: 40px 20px;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title {
+    font-size: 3rem;
+    color: #f8f8f2;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: #6272a4;
+}
+
+/* Features Section (Cards) */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #44475a; /* Dark card background */
     padding: 20px;
-  }
-  
-  .sidebar a {
-    color: var(--text-color);
-    text-decoration: none;
-    padding: 12px;
-    display: block;
-    transition: color 0.2s ease, background 0.2s ease;
-  }
-  
-  .sidebar a:hover {
-    background: var(--accent-color);
-    color: #fff;
-    border-radius: 5px;
-  }
-  
-  /* Floating Toolbox */
-  .floating-toolbox {
-    background: rgba(255, 255, 255, 0.7);
-    box-shadow: 4px 4px 10px var(--shadow-dark), -4px -4px 10px var(--shadow-light);
-    padding: 15px;
-    border-radius: 15px;
-    backdrop-filter: blur(6px);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-  }
-  
-  .floating-toolbox .tabs svg {
-    fill: var(--text-color);
-  }
-  
-  /* Scrollbar Styling */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.5);
-  }
-  ::-webkit-scrollbar-thumb {
-    background: var(--accent-color);
+}
+
+.card:hover {
+    background-color: #6272a4; /* Light highlight on hover */
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #f8f8f2;
+}
+
+.card p {
+    color: #f8f8f2;
+    font-size: 1.1rem;
+}
+
+/* Call to Action Section */
+.call-to-action {
+    text-align: center;
+    margin: 50px 0;
+    padding: 40px;
+    background-color: #44475a; /* Dark background to highlight this section */
     border-radius: 10px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgba(46, 204, 113, 0.85);
-  }
-  
-  /* Input Fields */
-  input[type="text"], input[type="email"], input[type="search"], textarea, select {
-    background: rgba(255, 255, 255, 0.6);
+}
+
+.call-to-action h2 {
+    color: #f8f8f2;
+    font-size: 2.5rem;
+}
+
+.call-to-action p {
+    font-size: 1.2rem;
+    color: #6272a4;
+    margin-bottom: 20px;
+}
+
+.call-to-action .action-btn {
+    background-color: #50fa7b; /* Green button for sustainability */
+    color: #282a36; /* Dark text on green button */
+    font-size: 1.2rem;
+    padding: 12px 30px;
     border: none;
-    border-radius: 10px;
-    padding: 10px;
-    color: var(--text-color);
-    box-shadow: inset 4px 4px 10px var(--shadow-dark), inset -4px -4px 10px var(--shadow-light);
-    transition: box-shadow 0.2s ease, background 0.2s ease;
-  }
-  
-  input[type="text"]:focus, input[type="email"]:focus, input[type="search"]:focus, textarea:focus, select:focus {
-    background: rgba(255, 255, 255, 0.8);
-    box-shadow: inset 2px 2px 4px var(--shadow-dark), inset -2px -2px 4px var(--shadow-light);
-    outline: none;
-  }
-  
-  /* Table */
-  table.table {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.6);
-    box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
-    border-radius: 20px;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  table.table tr {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  
-  table.table tr:hover {
-    background: rgba(46, 204, 113, 0.1);
-  }
-  
-  /* Blockquote */
-  blockquote {
-    background: rgba(255, 255, 255, 0.6);
-    border-left: 5px solid var(--accent-color);
-    padding: 15px;
-    color: var(--text-color);
-    box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
-    border-radius: 10px;
-    transition: background 0.3s ease;
-  }
-  
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.call-to-action .action-btn:hover {
+    background-color: #4ecca3; /* Lighter green on hover */
+}
+
+/* Donate Section */
+.donate {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.donate h2 {
+    color: #f8f8f2;
+    font-size: 2.5rem;
+}
+
+.donate p {
+    color: #6272a4;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.donate .donate-btn {
+    background-color: #ffb86c; /* Warm yellow button to contrast with green */
+    color: #282a36;
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.donate .donate-btn:hover {
+    background-color: #ff9e3a; /* Lighter yellow on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #282a36;
+    text-align: center;
+    padding: 20px;
+    color: #6272a4;
+}
+
+footer p {
+    font-size: 1rem;
+}
