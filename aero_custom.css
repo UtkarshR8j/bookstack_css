@@ -1,165 +1,147 @@
-/* General Page Styles */
+
 html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #282a36; /* Dark background */
-    color: #f8f8f2; /* Light text */
-    line-height: 1.6;
+  font-family: 'Arial', sans-serif;
+  color: #2f3b34; /* Earthy Green */
+  background-color: #f4f8f2; /* Light Beige */
 }
 
-body {
-    color: #6272a4; /* Light bluish-gray text for body */
+html.dark-mode {
+  background-color: #303d34; /* Dark Green */
+  color: #e5e7e2; /* Soft Light Color */
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 700;
-    color: #f8f8f2; /* Ensure headings have bright contrast */
-}
-
-/* Header Section */
+/* Page Header */
 #header {
-    background-color: #282a36; /* Dark background */
-    padding: 20px 0;
-    text-align: center;
+  background-color: #4b6e3d; /* Deep Forest Green */
+  color: #f8f8f2; /* Off-White */
 }
 
+html.dark-mode #header {
+  background-color: #374c32; /* Darker Green */
+}
+
+/* Titles */
+.title-input.page-title input[type=text] {
+  background-color: #d4e2c6; /* Light Green */
+  color: #2f3b34; /* Earthy Green */
+  border: 1px solid #a5c2a7; /* Subtle Green Border */
+}
+
+html.dark-mode .title-input.page-title input[type=text] {
+  background-color: #5d6f51; /* Muted Green */
+  color: #f8f8f2; /* Off-White */
+  border: 1px solid #89a98e; /* Slightly Lighter Green Border */
+}
+
+/* Floating Toolbox */
+.floating-toolbox div[toolbox-tab-content] {
+  background-color: #f3f8f0; /* Soft Light Green */
+}
+
+html.dark-mode .floating-toolbox div[toolbox-tab-content] {
+  background-color: #3b4f3b; /* Dark Green */
+}
+
+/* Cards */
+html.dark-mode .card.drag-card {
+  background-color: #4b6e3d; /* Deep Forest Green */
+}
+
+html.dark-mode .card.drag-card .handle {
+  background-color: #3c5a3c; /* Muted Green */
+}
+
+.card.drag-card .outline input {
+  background-color: #f4f8f2; /* Light Beige */
+  color: #2f3b34; /* Earthy Green */
+}
+
+html.dark-mode .card.drag-card .outline input {
+  background-color: #5d6f51; /* Muted Green */
+  color: #f8f8f2; /* Off-White */
+}
+
+/* Form Inputs */
+html.dark-mode .fake-input, html.dark-mode .input-base, html.dark-mode input[type=color],
+html.dark-mode input[type=date], html.dark-mode input[type=email], html.dark-mode input[type=number],
+html.dark-mode input[type=password], html.dark-mode input[type=search], html.dark-mode input[type=text],
+html.dark-mode input[type=url], html.dark-mode select, html.dark-mode textarea {
+  color: #f8f8f2; /* Off-White */
+  background-color: #5d6f51; /* Muted Green */
+  border: 1px solid #8d9b7a; /* Slightly Lighter Green Border */
+}
+
+/* Markdown Editor */
+.markdown-editor-display {
+  background-color: #f4f8f2 !important; /* Light Beige */
+}
+
+html.dark-mode .markdown-editor-display {
+  background-color: #303d34; /* Dark Green */
+}
+
+/* Code Blocks */
+html.dark-mode code {
+  background-color: #6b7a58; /* Olive Green */
+  color: #f8f8f2; /* Off-White */
+}
+
+html.dark-mode pre {
+  background-color: #6b7a58; /* Olive Green */
+  color: #f8f8f2; /* Off-White */
+}
+
+/* Logo */
 .logo-text {
-    color: #50fa7b; /* Sustainable green color for logo text */
-    font-size: 2.5rem;
-    font-weight: bold;
-    letter-spacing: 1px;
+  color: #4b6e3d !important; /* Deep Forest Green */
 }
 
-/* Main Section */
-main {
-    padding: 40px 20px;
+/* Editor Toolbar */
+html.dark-mode .editor-toolbar {
+  background-color: #3b4f3b; /* Dark Green */
 }
 
-/* Intro Section */
-.intro {
-    text-align: center;
-    margin-bottom: 40px;
+/* Additional Styling */
+html.dark-mode .primary-background-light {
+  background-color: #374c32; /* Darker Green */
 }
 
-.page-title {
-    font-size: 3rem;
-    color: #f8f8f2;
-    margin-bottom: 15px;
+html.dark-mode .editor-toolbar button {
+  background-color: #4b6e3d; /* Deep Forest Green */
+  color: #f8f8f2; /* Off-White */
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
 }
 
-.intro p {
-    font-size: 1.2rem;
-    color: #6272a4;
+html.dark-mode .editor-toolbar button:hover {
+  background-color: #5d6f51; /* Lighter Green on Hover */
 }
 
-/* Features Section (Cards) */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
+/* Links */
+a {
+  color: #4b6e3d; /* Deep Forest Green */
+  text-decoration: none;
 }
 
-.card {
-    background-color: #44475a; /* Dark card background */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-}
-
-.card:hover {
-    background-color: #6272a4; /* Light highlight on hover */
-}
-
-.card h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #f8f8f2;
-}
-
-.card p {
-    color: #f8f8f2;
-    font-size: 1.1rem;
-}
-
-/* Call to Action Section */
-.call-to-action {
-    text-align: center;
-    margin: 50px 0;
-    padding: 40px;
-    background-color: #44475a; /* Dark background to highlight this section */
-    border-radius: 10px;
-}
-
-.call-to-action h2 {
-    color: #f8f8f2;
-    font-size: 2.5rem;
-}
-
-.call-to-action p {
-    font-size: 1.2rem;
-    color: #6272a4;
-    margin-bottom: 20px;
-}
-
-.call-to-action .action-btn {
-    background-color: #50fa7b; /* Green button for sustainability */
-    color: #282a36; /* Dark text on green button */
-    font-size: 1.2rem;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.call-to-action .action-btn:hover {
-    background-color: #4ecca3; /* Lighter green on hover */
-}
-
-/* Donate Section */
-.donate {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.donate h2 {
-    color: #f8f8f2;
-    font-size: 2.5rem;
-}
-
-.donate p {
-    color: #6272a4;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.donate .donate-btn {
-    background-color: #ffb86c; /* Warm yellow button to contrast with green */
-    color: #282a36;
-    font-size: 1.2rem;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.donate .donate-btn:hover {
-    background-color: #ff9e3a; /* Lighter yellow on hover */
+a:hover {
+  color: #6b7a58; /* Olive Green on Hover */
 }
 
 /* Footer */
 footer {
-    background-color: #282a36;
-    text-align: center;
-    padding: 20px;
-    color: #6272a4;
+  background-color: #4b6e3d; /* Deep Forest Green */
+  color: #f8f8f2; /* Off-White */
+  padding: 20px;
+  text-align: center;
 }
 
-footer p {
-    font-size: 1rem;
+/* Hide Specific Panels */
+#page-details {
+  display: none !important; /* Hide the page-details panel */
+}
+
+.tri-layout-left.print-hidden {
+  display: none !important; /* Hide the tri-layout-left print-hidden panel */
 }
