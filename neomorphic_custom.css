@@ -30,6 +30,10 @@ body {
   background-color: var(--primary-bg);
   transition: background-color 0.3s ease;
   color: var(--text-primary);
+  font-size: 16px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Headers and Titles */
@@ -66,20 +70,42 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 2px 2px 5px var(--shadow-dark), -2px -2px 5px var(--shadow-light);
 }
 
-/* Neomorphic Input Fields */
-input[type="text"], input[type="email"], input[type="search"], textarea, select {
+/* Search Bar Styles */
+.search-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 400px; /* Limit width of the search bar */
+  margin-bottom: 20px;
+}
+
+.search-container input[type="search"] {
+  width: 100%;
+  padding: 10px 40px 10px 20px; /* Extra padding to accommodate the icon */
   background: var(--card-bg);
-  border: none;
-  border-radius: 10px;
-  padding: 10px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 25px;
   color: var(--text-primary);
+  font-size: 1em;
   box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
   transition: box-shadow 0.2s ease;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="search"]:focus, textarea:focus, select:focus {
+.search-container input[type="search"]:focus {
   box-shadow: inset 2px 2px 4px var(--shadow-dark), inset -2px -2px 4px var(--shadow-light);
   outline: none;
+  border-color: var(--accent-color);
+}
+
+/* Search Icon */
+.search-container svg {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: var(--text-primary);
+  width: 20px;
+  height: 20px;
 }
 
 /* Sidebar */
