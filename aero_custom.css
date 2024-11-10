@@ -10,26 +10,30 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
 }
 
 /* Keep header CSS unchanged */
 header {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
   color: #333;
   padding: 20px;
   text-align: center;
   border-bottom: 2px solid #ddd;
+  border-radius: 10px;
+  backdrop-filter: blur(8px); /* Subtle blur for glassmorphic effect */
 }
 
 /* Text Content Styles */
 .page-content {
   padding: 20px;
-  background-color: #ffffff; /* White background for pages */
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); /* Soft shadow for page-like feel */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Soft shadow for page-like feel */
   background-image: url('https://www.transparenttextures.com/patterns/vertical-stripes.png'); /* Paper texture */
   background-size: auto;
   background-repeat: repeat;
+  backdrop-filter: blur(12px); /* Glassmorphic blur effect */
 }
 
 .page-content h1, .page-content h2, .page-content h3 {
@@ -44,66 +48,69 @@ header {
 
 /* Button Styles */
 .button {
-  background-color: #4caf50; /* Green button background */
-  color: #ffffff; /* White text */
-  padding: 10px 20px;
-  border-radius: 5px;
+  background-color: rgba(76, 175, 80, 0.8); /* Green with transparency */
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
   border: none;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  backdrop-filter: blur(6px); /* Glassmorphism effect */
 }
 
 .button:hover {
-  background-color: #388e3c; /* Darker green on hover */
+  background-color: rgba(56, 142, 60, 0.9); /* Darker green on hover */
 }
 
 .button.outline {
   background-color: transparent;
-  border: 2px solid #4caf50;
-  color: #4caf50;
+  border: 2px solid rgba(76, 175, 80, 0.8);
+  color: rgba(76, 175, 80, 0.8);
 }
 
 .button.outline:hover {
-  background-color: #4caf50;
+  background-color: rgba(76, 175, 80, 0.8);
   color: white;
 }
 
 /* Sidebar Styles */
 .sidebar {
-  background-color: #ffffff; /* Light background for sidebar */
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
   width: 250px;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for separation */
-  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(12px); /* Glass effect */
 }
 
 .sidebar a {
-  color: #333; /* Neutral text color for links */
+  color: #333;
   text-decoration: none;
   padding: 10px 0;
   display: block;
 }
 
 .sidebar a:hover {
-  background-color: #f1f8e9; /* Light green hover effect */
+  background-color: rgba(241, 248, 233, 0.5); /* Light green hover effect with transparency */
 }
 
 /* Cards */
 .card {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Soft shadow for cards */
+  background-color: rgba(255, 255, 255, 0.85); /* Slight transparency for card */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  backdrop-filter: blur(8px); /* Glassmorphic effect */
 }
 
 .card h3 {
-  color: #333; /* Dark color for card titles */
+  color: #333;
 }
 
 .card .card-content {
-  color: #333; /* Text color for card content */
+  color: #333;
 }
 
 /* Form Styles */
@@ -112,38 +119,41 @@ input[type="email"],
 input[type="password"],
 textarea {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  border-radius: 8px;
+  background-color: rgba(249, 249, 249, 0.9); /* Light background with transparency */
   color: #333;
   font-size: 1rem;
+  backdrop-filter: blur(6px); /* Glassmorphism effect */
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
 textarea:focus {
-  border-color: #4caf50; /* Green focus border */
+  border-color: rgba(76, 175, 80, 0.8); /* Green focus border */
   outline: none;
 }
 
 /* Links */
 a {
-  color: #333; /* Neutral color for links */
+  color: #333;
   text-decoration: none;
 }
 
 a:hover {
-  color: #388e3c; /* Slight green hover effect */
+  color: rgba(56, 142, 60, 0.9); /* Slight green hover effect */
 }
 
 /* Navigation Styles */
 nav {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent */
   padding: 15px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(8px); /* Glassmorphism blur */
 }
 
 nav ul {
@@ -158,30 +168,31 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #333; /* Neutral text color for navigation links */
+  color: #333;
   font-weight: 600;
 }
 
 nav ul li a:hover {
-  color: #388e3c;
+  color: rgba(56, 142, 60, 0.9);
   text-decoration: underline;
 }
 
 /* Footer Styles */
 footer {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.8);
   color: #333;
   text-align: center;
   padding: 20px;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(6px); /* Glassmorphism effect */
 }
 
 footer a {
-  color: #333; /* Neutral text color */
+  color: #333;
 }
 
 footer a:hover {
-  color: #388e3c;
+  color: rgba(56, 142, 60, 0.9);
 }
 
 /* Hide the page-details panel */
@@ -203,34 +214,34 @@ hr {
 }
 
 blockquote {
-  background-color: #f1f8e9;
-  border-left: 5px solid #4caf50;
+  background-color: rgba(241, 248, 233, 0.5); /* Soft green blockquote with transparency */
+  border-left: 5px solid rgba(76, 175, 80, 0.8);
   padding: 10px 20px;
   font-style: italic;
 }
 
 /* Notifications */
 .notification {
-  background-color: #e8f5e9;
+  background-color: rgba(232, 245, 233, 0.8); /* Light green notification with transparency */
   color: #388e3c;
   padding: 10px;
-  border-left: 5px solid #4caf50;
+  border-left: 5px solid rgba(76, 175, 80, 0.8);
   border-radius: 5px;
   margin-bottom: 15px;
 }
 
 .notification.success {
-  background-color: #dcedc8;
+  background-color: rgba(220, 237, 200, 0.8);
   color: #388e3c;
 }
 
 .notification.error {
-  background-color: #ffebee;
+  background-color: rgba(255, 235, 235, 0.8);
   color: #d32f2f;
 }
 
 .notification.info {
-  background-color: #e3f2fd;
+  background-color: rgba(227, 242, 253, 0.8);
   color: #1976d2;
 }
 
