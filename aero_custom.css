@@ -1,0 +1,180 @@
+/* Scenic Background */
+body {
+    background: url('https://public-blob.s3.us-east-1.amazonaws.com/katrien-van-crombrugghe-mqJp2Bv6bkM-unsplash.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    transition: background 0.5s ease;
+  }
+  
+  #page-details, .tri-layout-left.print-hidden {
+    display: none !important;
+  }
+  
+  /* Main Color Palette */
+  :root {
+    --transparent-white: rgba(255, 255, 255, 0.7);
+    --transparent-dark: rgba(0, 0, 0, 0.5);
+    --accent-color: rgba(46, 204, 113, 0.7); /* Soft futuristic green */
+    --text-color: #222;
+    --shadow-light: rgba(255, 255, 255, 0.6);
+    --shadow-dark: rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Body Text */
+  html, body {
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Transparent, glassy card design */
+  .card, .button, .sidebar, .floating-toolbox, table.table {
+    background: var(--transparent-white);
+    backdrop-filter: blur(8px);
+    box-shadow: 4px 4px 12px var(--shadow-dark), -4px -4px 12px var(--shadow-light);
+    border-radius: 20px;
+    padding: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Headers */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 0.5em;
+  }
+  
+  /* Search Bar with Transparent Overlay */
+  .search-box input {
+    background: var(--transparent-white);
+    border-radius: 25px;
+    padding: 12px 24px;
+    color: var(--text-color);
+    box-shadow: inset 2px 2px 8px var(--shadow-dark), inset -2px -2px 8px var(--shadow-light);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .search-box input:focus {
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: inset 2px 2px 6px var(--shadow-dark), inset -2px -2px 6px var(--shadow-light);
+    outline: none;
+  }
+  
+  /* Button Design */
+  .button {
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+  }
+  
+  .button:hover {
+    background: rgba(46, 204, 113, 0.85);
+    box-shadow: 2px 2px 5px var(--shadow-dark), -2px -2px 5px var(--shadow-light);
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
+    border-radius: 25px;
+    padding: 20px;
+  }
+  
+  .sidebar a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 12px;
+    display: block;
+    transition: color 0.2s ease, background 0.2s ease;
+  }
+  
+  .sidebar a:hover {
+    background: var(--accent-color);
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  /* Floating Toolbox */
+  .floating-toolbox {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 4px 4px 10px var(--shadow-dark), -4px -4px 10px var(--shadow-light);
+    padding: 15px;
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
+  }
+  
+  .floating-toolbox .tabs svg {
+    fill: var(--text-color);
+  }
+  
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(46, 204, 113, 0.85);
+  }
+  
+  /* Input Fields */
+  input[type="text"], input[type="email"], input[type="search"], textarea, select {
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--text-color);
+    box-shadow: inset 4px 4px 10px var(--shadow-dark), inset -4px -4px 10px var(--shadow-light);
+    transition: box-shadow 0.2s ease, background 0.2s ease;
+  }
+  
+  input[type="text"]:focus, input[type="email"]:focus, input[type="search"]:focus, textarea:focus, select:focus {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 2px 2px 4px var(--shadow-dark), inset -2px -2px 4px var(--shadow-light);
+    outline: none;
+  }
+  
+  /* Table */
+  table.table {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
+    border-radius: 20px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  table.table tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  table.table tr:hover {
+    background: rgba(46, 204, 113, 0.1);
+  }
+  
+  /* Blockquote */
+  blockquote {
+    background: rgba(255, 255, 255, 0.6);
+    border-left: 5px solid var(--accent-color);
+    padding: 15px;
+    color: var(--text-color);
+    box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+  
