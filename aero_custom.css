@@ -34,12 +34,12 @@ header {
   top: 20px;
   right: 20px;
   background-color: rgba(255, 255, 255, 0.8);
-  color: #333;
+  color: #333; /* Dark text for better readability */
   border: 2px solid #333;
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   backdrop-filter: blur(6px); /* Glass effect */
   font-size: 1.2rem;
   font-weight: bold;
@@ -59,13 +59,14 @@ header {
 /* Text Content Styles */
 .page-content {
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  background-color: rgba(255, 255, 255, 0.9); /* Solid paper-like white background */
   border-radius: 12px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Soft shadow for page-like feel */
   background-image: url('https://www.transparenttextures.com/patterns/vertical-stripes.png'); /* Paper texture */
   background-size: auto;
   background-repeat: repeat;
   backdrop-filter: blur(12px); /* Glassmorphic blur effect */
+  transition: all 0.3s ease; /* Smooth transition for appearance */
 }
 
 .page-content h1, .page-content h2, .page-content h3 {
@@ -264,4 +265,34 @@ blockquote {
 
 .notification.success {
   background-color: rgba(220, 237, 200, 0.8);
-  color: #388e3
+  color: #388e3c;
+}
+
+.notification.error {
+  background-color: rgba(255, 235, 235, 0.8);
+  color: #d32f2f;
+}
+
+.notification.info {
+  background-color: rgba(227, 242, 253, 0.8);
+  color: #1976d2;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #81c784;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4caf50;
+}
