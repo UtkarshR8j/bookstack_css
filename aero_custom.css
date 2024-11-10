@@ -1,248 +1,269 @@
-/* Base Styles */
-html, body {
-  font-family: "Roboto", sans-serif !important;
-  background-color: #fafafa; /* Light background */
-  color: #333; /* Dark text for readability */
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+/* Base Structure */
+html {
+  background-color: #f8f8f8; /* Light background */
+  font-family: "Roboto", sans-serif;
+  color: #333; /* Dark text color for contrast */
 }
 
 body {
-  padding: 20px;
-  background-image: url('https://www.transparenttextures.com/patterns/paper.gif'); /* Paper texture background */
-  background-size: cover;
+  background-color: #f8f8f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-/* Page Content */
+h1, h2, h3, h4, h5, h6 {
+  color: #2e7d32; /* Professional green titles */
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  border-bottom: 2px solid #81c784; /* Subtle green underline */
+}
+
+p, span, a, .text-primary {
+  color: #333; /* Dark text for readability */
+}
+
+/* Text Content Styles */
 .page-content {
-  background-color: #fff;
-  padding: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff; /* White background for pages */
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Soft shadow to lift the paper effect */
-  box-sizing: border-box;
-  font-size: 16px;
-  border: 1px solid #ddd; /* Subtle border */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); /* Soft shadow for page-like feel */
 }
 
 .page-content h1 {
+  color: #2e7d32;
   text-transform: uppercase;
-  color: #2c3e50; /* Darker color for the main heading */
-  font-weight: 700;
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.page-content h2 {
-  color: #34495e; /* Slightly lighter dark for subheadings */
-  font-weight: 600;
-  margin-bottom: 10px;
 }
 
 .page-content p {
-  color: #555; /* Lighter grey text for body */
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-/* Links */
-a, a:hover, a:focus {
-  color: #27ae60; /* Green accent for links */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #2ecc71;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 /* Button Styles */
 .button {
-  background-color: #27ae60; /* Green button */
-  color: #fff;
-  text-transform: uppercase;
-  border: none;
-  padding: 12px 25px;
+  background-color: #4caf50; /* Green button background */
+  color: #ffffff; /* White text */
+  padding: 10px 20px;
   border-radius: 5px;
-  font-weight: bold;
+  border: none;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #2ecc71;
+  background-color: #388e3c; /* Darker green on hover */
 }
 
-/* Sidebar (if visible) */
-.flex.sidebar {
-  background-color: #fff;
-  color: #333;
+.button.outline {
+  background-color: transparent;
+  border: 2px solid #4caf50;
+  color: #4caf50;
+}
+
+.button.outline:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: #ffffff; /* Light background for sidebar */
   width: 250px;
   padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for separation */
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar .page, .sidebar .chapter, .sidebar .book {
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 5px;
-  transition: background-color 0.3s ease;
+.sidebar a {
+  color: #2e7d32;
+  text-decoration: none;
+  padding: 10px 0;
+  display: block;
 }
 
-.sidebar .page:hover {
-  background-color: #ecf0f1;
+.sidebar a:hover {
+  background-color: #f1f8e9; /* Light green hover effect */
 }
 
-.sidebar .chapter:hover {
-  background-color: #f39c12;
-}
-
-.sidebar .book:hover {
-  background-color: #1abc9c;
-}
-
-/* Hide the page-details panel */
-#page-details {
-  display: none !important;
-}
-
-/* Hide the tri-layout-left print-hidden panel */
-.tri-layout-left.print-hidden {
-  display: none !important;
-}
-
-/* Form Inputs */
-input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="url"], select, textarea {
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 5px;
-  width: 100%;
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-input[type="text"]:focus, textarea:focus, select:focus {
-  outline: none;
-  border-color: #27ae60; /* Green focus border */
-}
-
-/* Card Styles */
+/* Cards */
 .card {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #ffffff;
   border-radius: 8px;
-  padding: 20px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Soft shadow for cards */
   margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s ease;
 }
 
-.card:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+.card h3 {
+  color: #2e7d32;
+  border-bottom: 1px solid #81c784; /* Green border under card title */
 }
 
-.card .card-header {
-  font-size: 22px;
-  color: #2c3e50;
-  border-bottom: 2px solid #ddd;
-  margin-bottom: 15px;
+.card .card-content {
+  color: #333; /* Text color for card content */
 }
 
-.card .card-body {
-  color: #555;
-}
-
-/* Table Styles */
-table.table {
+/* Form Styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-table.table th, table.table td {
   padding: 12px;
-  text-align: left;
-  border: 1px solid #ddd;
-}
-
-table.table tr:hover {
-  background-color: #ecf0f1;
-}
-
-table.table th {
-  background-color: #f5f5f5;
-  color: #333;
-}
-
-/* Blockquote */
-blockquote {
-  border-left: 4px solid #27ae60; /* Green accent */
-  background-color: #f9f9f9;
-  padding: 15px;
-  margin: 20px 0;
-  font-style: italic;
-  color: #555;
-}
-
-/* Code Blocks */
-pre {
-  background-color: #f9f9f9;
-  color: #333;
-  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  border: 1px solid #ddd;
-  overflow-x: auto;
-  font-size: 14px;
-  font-family: "Courier New", Courier, monospace;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 1rem;
 }
 
-/* Breadcrumb */
-.breadcrumb-listing {
-  display: flex;
-  gap: 5px;
-  margin: 20px 0;
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: #4caf50; /* Green focus border */
+  outline: none;
 }
 
-.breadcrumb-listing a {
-  color: #27ae60;
+/* Links */
+a {
+  color: #2e7d32;
   text-decoration: none;
 }
 
-.breadcrumb-listing a:hover {
-  color: #2ecc71;
+a:hover {
+  color: #388e3c;
 }
 
-/* Other Minor Styles */
-svg-icon {
-  fill: #27ae60;
+/* Navigation Styles */
+nav {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
-.fake-input, .input-base, input[type="date"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="text"], input[type="url"], select, textarea {
-  border: 1px solid #ddd;
-  background-color: #fff;
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: #388e3c;
+  text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #ffffff;
   color: #333;
-  padding: 10px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.faded a, .faded button, .faded span {
-  color: #333;
+footer a {
+  color: #2e7d32;
 }
 
-.entity-list {
-  background-color: #fff;
-  padding: 15px;
-  border: 1px solid #ddd;
+footer a:hover {
+  color: #388e3c;
+}
+
+/* Page Texture / Background */
+.page-content {
+  background-image: linear-gradient(135deg, #e8f5e9, #ffffff);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.page-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/vertical-stripes.png');
+  opacity: 0.05;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Global Transitions */
-*, *::before, *::after {
-  box-sizing: border-box;
-  transition: all 0.3s ease;
+::-webkit-scrollbar-thumb {
+  background: #81c784;
+  border-radius: 5px;
 }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4caf50;
+}
+
+/* Notifications */
+.notification {
+  background-color: #e8f5e9;
+  color: #388e3c;
+  padding: 10px;
+  border-left: 5px solid #4caf50;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.notification.success {
+  background-color: #dcedc8;
+  color: #388e3c;
+}
+
+.notification.error {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.notification.info {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+/* Misc */
+hr {
+  border: 0;
+  border-top: 1px solid #81c784;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+blockquote {
+  background-color: #f1f8e9;
+  border-left: 5px solid #4caf50;
+  padding: 10px 20px;
+  font-style: italic;
+}
+
