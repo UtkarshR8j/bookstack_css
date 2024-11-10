@@ -15,7 +15,7 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Keep header CSS unchanged */
+/* Header */
 header {
   background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
   color: #333;
@@ -77,6 +77,26 @@ header {
 .page-content p {
   line-height: 1.6;
   margin-bottom: 15px;
+}
+
+/* Links */
+a {
+  color: #333; /* Ensure links are dark for visibility */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: rgba(56, 142, 60, 0.9); /* Slight green hover effect */
+}
+
+/* Links inside .text-center */
+.text-center a {
+  color: rgba(56, 142, 60, 0.9); /* Ensure centered links are not white */
+}
+
+.text-center a:hover {
+  color: #388e3c; /* Green hover for centered links */
 }
 
 /* Button Styles */
@@ -170,16 +190,6 @@ textarea:focus {
   outline: none;
 }
 
-/* Links */
-a {
-  color: #333;
-  text-decoration: none;
-}
-
-a:hover {
-  color: rgba(56, 142, 60, 0.9); /* Slight green hover effect */
-}
-
 /* Navigation Styles */
 nav {
   background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent */
@@ -247,7 +257,7 @@ hr {
 }
 
 blockquote {
-  background-color: rgba(241, 248, 233, 0.5); /* Soft green blockquote with transparency */
+  background-color: rgba(241, 248, 233, 0.5);
   border-left: 5px solid rgba(76, 175, 80, 0.8);
   padding: 10px 20px;
   font-style: italic;
@@ -255,8 +265,8 @@ blockquote {
 
 /* Notifications */
 .notification {
-  background-color: rgba(232, 245, 233, 0.8); /* Light green notification with transparency */
-  color: #388e3c;
+  background-color: rgba(232, 245, 233, 0.8);
+  color: rgba(56, 142, 60, 0.9);
   padding: 10px;
   border-left: 5px solid rgba(76, 175, 80, 0.8);
   border-radius: 5px;
@@ -265,7 +275,7 @@ blockquote {
 
 .notification.success {
   background-color: rgba(220, 237, 200, 0.8);
-  color: #388e3c;
+  color: rgba(56, 142, 60, 0.9);
 }
 
 .notification.error {
