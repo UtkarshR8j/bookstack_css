@@ -1,11 +1,3 @@
-#page-details {
-    display: none !important;
-}
-
-/* Hide the tri-layout-left print-hidden panel */
-.tri-layout-left.print-hidden {
-    display: none !important;
-}
 /* Global Reset and Base Styles */
 * {
   margin: 0;
@@ -29,6 +21,11 @@ html, body {
   --text-primary: #304d30;       /* Dark green text */
   --accent-color: #7ac77a;       /* Accent green */
   --secondary-color: #d7e3d7;    /* Secondary accent, pale green */
+}
+
+/* Hide page-details and tri-layout-left.print-hidden */
+#page-details, .tri-layout-left.print-hidden {
+  display: none !important;
 }
 
 /* Main Background */
