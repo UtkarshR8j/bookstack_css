@@ -193,3 +193,13 @@ blockquote {
   color: var(--text-primary);
   box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
 }
+
+
+#page-details {
+    display: none !important;
+}
+
+/* Hide the tri-layout-left print-hidden panel */
+.tri-layout-left.print-hidden {
+    display: none !important;
+}
