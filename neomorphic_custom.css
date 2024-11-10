@@ -1,10 +1,19 @@
-.tri-layout-left.print-hidden {
-    display: none !important;
+/* Global Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/* Importing Google Font for a cleaner look */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html, body {
+  font-family: 'Verdana', sans-serif;
+  background-color: #f0f4f0;  /* Soft white/green background */
+  color: #304d30;  /* Dark green text */
+  line-height: 1.6;
+}
+
+/* Color Palette */
 :root {
-  /* Color Palette */
   --primary-bg: #f0f4f0;         /* Soft white/green background */
   --card-bg: #e8f1e8;            /* Light greenish base for cards */
   --shadow-dark: #c1d4c1;        /* Soft shadow for depth */
@@ -13,43 +22,55 @@
   --accent-color: #7ac77a;       /* Accent green */
   --secondary-color: #d7e3d7;    /* Secondary accent, pale green */
 }
-html, body {
-  font-family: 'Roboto', sans-serif;
-  color: var(--text-primary);
-  background-color: var(--primary-bg);
-  margin: 0;
-  padding: 0;
-}
-/* Main Background and Body */
+
+/* Main Background */
 html {
   background-color: var(--primary-bg);
   transition: background-color 0.3s ease;
 }
-body {
-  background-color: var(--primary-bg);
-  transition: background-color 0.3s ease;
-  color: var(--text-primary);
-}
-/* Headers and Titles */
+
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--text-primary);
-  font-weight: 400;
+  font-weight: normal;
   text-transform: uppercase;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
+  color: var(--text-primary);
 }
-/* Card & Button Styles */
+
+h1 {
+  font-size: 1.75em; /* Smaller size for h1 */
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+h5, h6 {
+  font-size: 1em; /* For smaller titles */
+}
+
+/* Cards and Buttons */
 .card, .button {
   background: var(--card-bg);
-  box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
   border-radius: 15px;
+  box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
   padding: 20px;
   margin: 20px;
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
+
 /* Buttons */
 .button {
-  background: var(--accent-color);
-  color: #ffffff;
+  background-color: var(--accent-color);
+  color: #fff;
   border: none;
   font-weight: bold;
   padding: 10px 20px;
@@ -57,9 +78,11 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
   transition: box-shadow 0.2s ease;
 }
+
 .button:hover {
   box-shadow: 2px 2px 5px var(--shadow-dark), -2px -2px 5px var(--shadow-light);
 }
+
 /* Neomorphic Input Fields */
 input[type="text"], input[type="email"], input[type="search"], textarea, select {
   background: var(--card-bg);
@@ -70,10 +93,12 @@ input[type="text"], input[type="email"], input[type="search"], textarea, select 
   box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
   transition: box-shadow 0.2s ease;
 }
+
 input[type="text"]:focus, input[type="email"]:focus, input[type="search"]:focus, textarea:focus, select:focus {
   box-shadow: inset 2px 2px 4px var(--shadow-dark), inset -2px -2px 4px var(--shadow-light);
   outline: none;
 }
+
 /* Sidebar */
 .sidebar {
   background-color: var(--card-bg);
@@ -82,32 +107,39 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="search"]:focus,
   padding: 20px;
   color: var(--text-primary);
 }
+
 .sidebar a {
   color: var(--text-primary);
   text-decoration: none;
   padding: 10px;
   display: block;
 }
+
 .sidebar a:hover {
   background-color: var(--accent-color);
   color: #fff;
   border-radius: 5px;
   transition: background-color 0.2s ease;
 }
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--primary-bg);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--secondary-color);
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-color);
 }
+
 /* Floating Toolbox */
 .floating-toolbox {
   background: var(--card-bg);
@@ -115,18 +147,22 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="search"]:focus,
   border-radius: 10px;
   padding: 10px;
 }
+
 .floating-toolbox .tabs svg {
   fill: var(--text-primary);
 }
-/* Transitions and Hover Effects */
+
+/* Hover Effects */
 .card:hover, .sidebar:hover, .floating-toolbox:hover {
   box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
 }
+
 a, a:hover {
   color: var(--accent-color);
   text-decoration: none;
   transition: color 0.2s ease;
 }
+
 /* Table Styling */
 table.table {
   width: 100%;
@@ -134,12 +170,15 @@ table.table {
   box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
   border-radius: 15px;
 }
+
 table.table tr {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 table.table tr:hover {
   background-color: var(--secondary-color);
 }
+
 /* Blockquote */
 blockquote {
   background-color: var(--card-bg);
