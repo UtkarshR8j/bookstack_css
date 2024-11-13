@@ -218,3 +218,7 @@ blockquote {
   background-color: #ffffff; /* Sets the background to white */
 }
 
+.entity-meta-item {
+  display: none !important;
+}
+
