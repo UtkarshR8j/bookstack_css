@@ -203,3 +203,9 @@ blockquote {
 .tri-layout-left.print-hidden {
     display: none !important;
 }
+
+
+.mb-xl,
+.grid-card-footer {
+  display: none !important;
+}
