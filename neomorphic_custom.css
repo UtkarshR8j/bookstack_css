@@ -209,6 +209,11 @@ blockquote {
   display: none !important;
 }
 
-.content-wrap card {
-  style="background-color:#ffffff";
+.content-wrap.card {
+  background-color: #ffffff; /* Sets the background to white */
+}
+
+summary {
+  font-size: 1.2em; /* Makes the font size 20% larger than the parent element's font size */
+  font-weight: bold; /* Optional: Make the text bold for emphasis */
 }
