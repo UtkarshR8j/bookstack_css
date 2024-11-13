@@ -206,6 +206,6 @@ blockquote {
 
 
 
-.grid-card-footer {
+.entity-meta,.grid-card-footer {
   display: none !important;
 }
