@@ -26,7 +26,8 @@ html, body {
   --shadow-light: #ffffff;       /* Highlight for 3D effect */
   --text-primary: #304d30;       /* Dark green text */
   --accent-color: #7ac77a;       /* Accent green */
-  --secondary-color: #d7e3d7;    /* Secondary accent, pale green */
+  --secondary-color: #d7e3d7; /* Secondary accent, pale green */
+  --text-dark: #000000;  /*dark text*/
 }
 
 /* Main Background */
@@ -39,7 +40,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   margin-bottom: 0.5em;
-  color: var(--text-primary);
+  color: var(--text-dark);
 }
 
 h1 {
@@ -54,11 +55,11 @@ h3 {
   font-size: 1em;
 }
 
-h4 {
+h4,summary {
   font-size: 0.9em;
 }
 
-h5, h6,summary{
+h5, h6{
   font-size: 0.7em; /* For smaller titles */
 }
 
