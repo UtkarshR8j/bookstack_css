@@ -208,3 +208,7 @@ blockquote {
 .grid-card-footer {
   display: none !important;
 }
+
+.content-wrap card {
+  style="background-color:#ffffff";
+}
