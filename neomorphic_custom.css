@@ -58,7 +58,7 @@ h4 {
   font-size: 0.9em;
 }
 
-h5, h6 {
+h5, h6,summary{
   font-size: 0.7em; /* For smaller titles */
 }
 
