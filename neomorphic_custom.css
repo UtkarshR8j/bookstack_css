@@ -222,3 +222,19 @@ blockquote {
   display: none !important;
 }
 
+#main-content {
+    background: #fdfcf8; /* Light ivory or off-white background */
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+    font-family: "Georgia", serif; /* For a classic print-like font */
+    line-height: 1.6;
+}
+
+.content-wrap {
+    background-color: #fffdfa; /* Softer white with a slight warm tone */
+    border-radius: 6px;
+    padding: 1.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
