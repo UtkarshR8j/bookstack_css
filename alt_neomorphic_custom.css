@@ -1,0 +1,235 @@
+/* Global Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hide page-details and tri-layout-left.print-hidden immediately */
+#page-details, .tri-layout-left.print-hidden {
+  display: none !important;
+}
+
+/* Apply Verdana font to all text */
+html, body {
+  font-family: 'Verdana', sans-serif;
+  background-color: #f0f4f0;  /* Soft white/green background */
+  color: #304d30;  /* Dark green text */
+  line-height: 1.6;
+}
+
+/* Color Palette */
+:root {
+  --primary-bg: #f0f4f0;         /* Soft white/green background */
+  --card-bg: #e8f1e8;            /* Light greenish base for cards */
+  --shadow-dark: #c1d4c1;        /* Soft shadow for depth */
+  --shadow-light: #ffffff;       /* Highlight for 3D effect */
+  --text-primary: #304d30;       /* Dark green text */
+  --accent-color: #7ac77a;       /* Accent green */
+  --secondary-color: #d7e3d7; /* Secondary accent, pale green */
+  --text-dark: #000000;  /*dark text*/
+}
+
+/* Main Background */
+html {
+  background-color: var(--primary-bg);
+  transition: background-color 0.3s ease;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin-bottom: 0.5em;
+  color: var(--text-dark);
+}
+
+h1 {
+  font-size: 1.5em; /* Smaller size for h1 */
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+h4 {
+  font-size: 0.9em;
+}
+
+summary{
+  font-size: 1em;
+}
+
+h5, h6{
+  font-size: 0.7em; /* For smaller titles */
+}
+
+/* Cards and Buttons */
+.card, .button {
+  background: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+  padding: 20px;
+  margin: 20px;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Buttons */
+.button {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
+  transition: box-shadow 0.2s ease;
+}
+
+.button:hover {
+  box-shadow: 2px 2px 5px var(--shadow-dark), -2px -2px 5px var(--shadow-light);
+}
+
+/* Neomorphic Input Fields */
+input[type="text"], input[type="email"], input[type="search"], textarea, select {
+  background: var(--card-bg);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--text-primary);
+  box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+  transition: box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="search"]:focus, textarea:focus, select:focus {
+  box-shadow: inset 2px 2px 4px var(--shadow-dark), inset -2px -2px 4px var(--shadow-light);
+  outline: none;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--card-bg);
+  box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+  border-radius: 20px;
+  padding: 20px;
+  color: var(--text-primary);
+  width: 300px; /* Fixed width for the sidebar */
+}
+
+.sidebar a {
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+/* Floating Toolbox */
+.floating-toolbox {
+  background: var(--card-bg);
+  box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.floating-toolbox .tabs svg {
+  fill: var(--text-primary);
+}
+
+/* Hover Effects */
+.card:hover, .sidebar:hover, .floating-toolbox:hover {
+  box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
+}
+
+a, a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Table Styling */
+table.table {
+  width: 100%;
+  background: var(--card-bg);
+  box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+  border-radius: 15px;
+}
+
+table.table tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+table.table tr:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Blockquote */
+blockquote {
+  background-color: var(--card-bg);
+  border-left: 5px solid var(--accent-color);
+  padding: 15px;
+  color: var(--text-primary);
+  box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+}
+
+/* Main Content and Sidebar Layout */
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#main-content {
+  background: #fdfcf8; /* Light ivory or off-white background */
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+  font-family: "Georgia", serif; /* For a classic print-like font */
+  line-height: 1.6;
+  flex-grow: 1; /* Makes the main content area take up available space */
+}
+
+.content-wrap {
+  background-color: #fffdfa; /* Softer white with a slight warm tone */
+  border-radius: 6px;
+  padding: 1.5em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox Sidebar */
+.sidebar {
+  background-color: var(--card-bg);
+  box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+  border-radius: 20px;
+  padding: 20px;
+  color: var(--text-primary);
+  width: 300px; /* Fixed width for the sidebar */
+  margin-left: 20px; /* Space between the content and the sidebar */
+}
