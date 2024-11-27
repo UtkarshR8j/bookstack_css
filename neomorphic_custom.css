@@ -36,36 +36,36 @@ html {
   transition: background-color 0.3s ease;
 }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
+/* /* Headings */
+/* h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   margin-bottom: 0.5em;
   color: var(--text-dark);
-}
-
+} */
+/* 
 h1 {
-  font-size: 2.5em; /* Smaller size for h1 */
-}
-
+  font-size: 2.5em; 
+} */
+/* 
 h2 {
   font-size: 2em;
 }
 
 h3 {
   font-size: 1.5em;
-}
+} */
 
-h4 {
+/* h4 {
   font-size: 1em;
-}
+} */
 
-summary{
+/* summary{
   font-size: 1em;
-}
+} */
 
 h5, h6{
   font-size: 0.7em; /* For smaller titles */
-}
+} */
 
 /* Cards and Buttons */
 .card, .button {
