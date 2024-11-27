@@ -1,26 +1,30 @@
-
+/* Neomorphic Theme for h1#bkmrk-page-title */
 h1#bkmrk-page-title {
     font-size: 2.5rem;
     color: #1dbf72;
     text-align: center;
     margin: 40px 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Neomorphic Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px auto;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    border-radius: 10px;
+    background-color: #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1), -8px -8px 15px rgba(255, 255, 255, 0.7);
     overflow: hidden;
     transition: box-shadow 0.3s ease-in-out;
 }
 
+/* Table Hover Effect */
 table:hover {
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.15), -12px -12px 20px rgba(255, 255, 255, 0.8);
 }
 
+/* Table Header Styling */
 th, td {
     padding: 15px;
     text-align: left;
@@ -28,22 +32,29 @@ th, td {
     font-size: 1rem;
     color: #555;
     transition: background-color 0.3s, transform 0.2s ease-in-out;
+    background-color: #f5f5f5;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.7);
 }
 
+/* Table Header (th) Styling */
 th {
     background-color: #1dbf72;
     color: #fff;
     font-weight: bold;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.7);
 }
 
+/* Hover Effects for Header and Table Cells */
 th:hover {
     background-color: #159e5a;
     cursor: pointer;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.15), inset -5px -5px 10px rgba(255, 255, 255, 0.75);
 }
 
 td:hover {
     background-color: #e0f7e6;
     transform: scale(1.02);
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.15), inset -5px -5px 10px rgba(255, 255, 255, 0.75);
 }
 
 /* Row hover effect */
@@ -51,6 +62,7 @@ tr:hover td {
     background-color: #f1fdf5;
 }
 
+/* Specific Styling for colspan="5" cells */
 td[colspan="5"] {
     background-color: #e0f7e6;
     text-align: center;
@@ -58,27 +70,24 @@ td[colspan="5"] {
     font-weight: bold;
     color: #1dbf72;
     transition: background-color 0.3s;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.7);
 }
 
-tr:first-child td[colspan="5"] {
-    background-color: #fff;
-    color: #333;
-}
-
+tr:first-child td[colspan="5"],
 tr:last-child td[colspan="5"] {
     background-color: #fff;
     color: #333;
 }
 
-/* Specific styles for first and last rows (headers) */
+/* Styling for first and last rows */
 tr:first-child th {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 
 tr:last-child td {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
 /* Table for specific sections (tables within tables) */
