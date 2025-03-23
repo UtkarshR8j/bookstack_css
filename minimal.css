@@ -1,0 +1,12 @@
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Hide page-details and tri-layout-left.print-hidden immediately */
+  #page-details, .tri-layout-left.print-hidden {
+    display: none !important;
+  }
+ 
